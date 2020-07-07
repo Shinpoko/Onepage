@@ -1,0 +1,270 @@
+<html xmlns="https://www.w3.org/1999/xhtml" >
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Gamgab's World</title>
+  <style>
+@font-face{
+	font-family: "Lato";
+	src: url("Lato-Bold.ttf") format('truetype');
+	font-weight: bold;
+	font-style: normal;
+	}
+</style>
+<link rel="stylesheet" href="animate.css">
+<link rel="stylesheet" href="style.css">
+
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="jquery-ui.min.js"></script>
+<script type="text/javascript" src="wow.min.js"></script>
+<script type="text/javascript" src="responsiveslides.min.js"></script>
+
+<script>
+	new WOW().init();
+
+	$(function() {
+    $(".rslides").responsiveSlides({
+    	speed: 2000,
+    	timeout: 4000
+    });
+  });
+</script>
+</head>
+
+<body class="index" style="margin: 0;font-family: 'Lato', sans-serif;">
+
+<!--
+<div id="page">
+-->
+	<section id="header">
+
+		<div class="container">
+        <header>
+            <h1 class="main-heading">Gabriel Hadjouis</h1>
+            <div class="main-subheading">Frontend developer.</div>
+        </header>
+    </div>
+
+		<div class="superG" style="/*opacity: 1;
+			animation: 0s ease 0s 1 normal none running none;
+			transform: translateX(0.0640556%) translateY(-0.0902778%);*/">
+
+        	<div class="Z">G</div>
+    	</div>
+	</section>
+
+
+                                     <!-- LISTE -->
+
+
+	<div class="liste">
+		
+	<div id="djill">
+		<div class="wow fadeInUp sites" data-wow-duration="1.5s" data-wow-delay="0.1s" data-wow-offset="70">
+			<div class="borderMove" style="float: left; border-color: grey;"></div>
+			<div class="proj_skewG">
+				<div class="project_img">
+					<ul class="rslides">
+					  <li><img src="dh1.png" alt=""></li>
+					  <li><img src="dh2.png" alt=""></li>
+					  <li><img src="dh3.png" alt=""></li>
+					</ul>
+				</div>
+			</div>
+			<div class="projet">
+				<div class="titre_projet">
+					<div class="fleche_ensemble" style="right:26px;">
+						<div class="fleche3"></div>
+					</div>
+					<div class="back_descr">
+						<p class="name_proj">
+							DJILLALI HADJOUIS
+						</p>
+					</div>
+				</div>
+				<p class="text_proj">Le site web de Djillali Hadjouis</p>
+			</div>	
+		</div>
+	</div>
+
+
+
+	<div id="djeco">
+		<div class="wow fadeInUp sites" data-wow-duration="1.5s" data-wow-delay="0.1s" data-wow-offset="70">
+			<div class="borderMove" style="float:right; right: 20px; border-color: #d8f9ef;"></div>
+			<div class="proj_skewG" style="height: 320px; float: right; top: 0; right: 0;">
+				<div class="project_img" style="transform: translateX(-14.714%) translateY(-10%)">
+					<!-- style="transform: skewX(15deg) translateX(-14.714%) translateY(-10%)" -->
+					<video width="570" height="auto" autoplay muted loop style="width: 680px;">
+  						<source src="video/djeco.mp4" type="video/mp4">
+					</video>
+				</div>
+			</div>
+			<div class="projet" style="float: left;">
+				<div class="titre_projet">
+					<div class="fleche_ensemble" style="left: 0; right: unset; z-index: 1;">
+						<div class="fleche3"></div>
+					</div>
+					<div class="back_descr" style="left: 0; padding-left: 10; z-index: 10;">
+						<p class="name_proj" style="float: left;">
+							DJECO
+						</p>
+					</div>
+				</div>
+				<p class="text_proj" style="text-align: left;">Le site des jouets pour enfants Djeco</p>
+			</div>	
+		</div>
+	</div>
+		
+
+
+	<div id="mille">
+		<div class="wow fadeInUp sites" data-wow-duration="1.5s" data-wow-delay="0.1s" data-wow-offset="70">
+			<div class="borderMove" style="float: left; border-color: #775a43;"></div>
+			<div class="proj_skewG">
+				<div class="project_img">
+					<ul class="rslides">
+					  <li><img src="RM01.jpg" alt=""></li>
+					  <li><img src="RM02.jpg" alt=""></li>
+					  <li><img src="RM03.jpg" alt=""></li>
+					</ul>
+				</div>
+			</div>
+			<div class="projet">
+				<div class="titre_projet">
+					<div class="fleche_ensemble">
+						<div class="fleche3"></div>
+					</div>
+					<div class="back_descr">
+						<p class="name_proj">
+							RICHARD MILLE
+						</p>
+					</div>
+				</div>
+				<p class="text_proj">Un site sur les montres Richard Mille</p>
+			</div>
+		</div>
+	</div>
+
+	</div>
+
+
+
+
+	<div class="bandeau" style="width: 100%; height: 600px; background: blueviolet;">
+		<div class="title">
+		  <div class="titre_barre">
+		  </div>
+		</div>
+		<div>
+  			<h2 class="section-title">Formation</h2>
+		</div>
+	</div>
+
+
+</div>
+
+
+<script>
+
+$("#header").mouseenter(function(){
+	superG_movement(); //".superG", 0.040
+});
+
+$("#mille").mouseenter(function(){
+	entreeSouris("#mille", 0.125);
+});
+$("#mille").mouseleave(function(){
+	sortieSouris("#mille", 0.125);
+});
+
+$("#djeco").mouseenter(function(){
+	entreeSouris("#djeco", 0.125);
+});
+$("#djeco").mouseleave(function(){
+	sortieSouris("#djeco", 0.125);
+});
+
+$("#djill").mouseenter(function(){
+	entreeSouris("#djill", 0.125);
+});
+
+$("#djill").mouseleave(function(){
+	sortieSouris("#djill", 0.125);
+});
+
+
+
+function entreeSouris(les_sites, reduc)
+{
+	var DivMove = document.querySelector(les_sites),
+	MoveBorder = DivMove.querySelector(".borderMove"),
+	IMGmove = DivMove.querySelector(".proj_skewG"),
+	FlecheMov = DivMove.querySelector(".fleche3"),
+	NameProject = DivMove.querySelector(".name_proj");
+	reduction = reduc; //0.125; //0.040 de base
+
+	FlecheMov.style.display = "inline-block";
+	//FlecheMov.style.opacity = 1;
+	FlecheMov.style.animation = "none";
+	FlecheMov.style.transform = "scaleX(1)";
+
+	NameProject.style.color = "white";
+
+	document.body.onmousemove = function(e)
+	{
+		var divHorizScale = -(e.clientX / window.innerWidth - 0.5) * 100 * reduction;
+		var divVertScale = -(e.clientY / window.innerHeight - 0.5) * 100 * reduction * 2;
+		var imgHScale = -divHorizScale;
+		var imgVScale = -divVertScale;
+
+		MoveBorder.style.opacity = 1;
+		MoveBorder.style.animation = "none";
+		MoveBorder.style.transform = "translateX(" + divHorizScale + "%) translateY(" + divVertScale + "%)";
+
+		IMGmove.style.opacity = 1;
+		IMGmove.style.animation = "none";
+		IMGmove.style.transform = "translateX(" + imgHScale + "%) translateY(" + imgVScale + "%)";	
+	}
+
+};
+
+
+function sortieSouris(les_sites) {
+
+	var DivMove = document.querySelector(les_sites),
+	FlecheMov = DivMove.querySelector(".fleche3"),
+	NameProject = DivMove.querySelector(".name_proj");
+
+	//FlecheMov.style.opacity = 0;
+	FlecheMov.style.transform = "scaleX(0)";
+	//FlecheMov.style.display = "none";
+	NameProject.style.color = "black";
+
+};
+
+
+// Little movement on the header G
+function superG_movement()
+{
+	var ZContainer = document.querySelector(".superG"),
+		VitesseReduc = 0.040;
+
+	document.body.onmousemove = function(z)
+	{
+		if(document.body.scrollTop < window.innerHeight && ZContainer != null)
+		{
+			var horizScale = -(z.clientX / window.innerWidth - 0.5) * 100 * VitesseReduc;
+			var vertScale = -(z.clientY / window.innerHeight - 0.5) * 100 * VitesseReduc * 2;
+
+			ZContainer.style.opacity = 1;
+			ZContainer.style.animation = "none";
+
+			ZContainer.style.transform = "translateX(" + horizScale + "%) translateY(" + vertScale + "%)";
+		}
+	}
+}
+
+
+</script>
+
+</body></html>
