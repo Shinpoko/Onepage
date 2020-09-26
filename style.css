@@ -126,6 +126,7 @@ header {
     animation: fadeInAndUp 1.5s 0.5s forwards;
 }
 
+/*
 .Z-container {
     -webkit-animation: fadeInAndUp 2s ease-out forwards;
     animation: fadeInAndUp 2s ease-out forwards;
@@ -134,6 +135,7 @@ header {
     transform: translateY(50%);
     opacity: 0;
 }
+*/
 
 .superG {
     position: absolute;
@@ -141,10 +143,13 @@ header {
     left: 0;
     width: 100%;
     height: 83vh;
+    -webkit-animation: fadeInAndUp 1s ease-out forwards;
+    animation: fadeInAndUp 1s ease-out forwards;
+    opacity: 0;
 }
 
 .Z {
-    font-family: 'Futura Bold', 'Roboto', Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif; /* 'Futura Bold' */
     height: 83vh;
     font-weight: bold;
     font-size: 108vh;
@@ -242,13 +247,16 @@ header {
 .sites {
     width: 100%;
     height: 390px;
-    margin: 40 0px;
+    margin: 35 0px;
     display: inline-block;
     position: relative;
 }
+
+/*
 .sites:first-child {
     margin: 25px 0px 40px 0;
 }
+*/
 
 #mille, #djeco, #djill {
     width: 100%;
@@ -325,9 +333,10 @@ header {
 .name_proj {
     font-weight: bold;
     font-size: 36px;
-    color: black;
+    color: white;
     margin: 0px 10px;
-    float: right;
+    /*float: right;*/
+    text-align: center;
 }
 .text_proj {
     font-size: 16px;
@@ -355,11 +364,82 @@ header {
 .back_descr {
     display: inline-block;
     /*background: blue;*/
-    padding-right: 30px;
+    /*padding-right: 30px;*/
     position: absolute;
     top: 0;
     right: 0;
+    width: 364px;
 }
+
+
+.bandeau {
+    width: 100%;
+    height: 500px;
+    background: url(open-data-code.jpg) center 0 no-repeat fixed;
+}
+
+.titre_barre {
+    margin: 0 7% 0 7%;
+    height: 140px;
+    border-bottom: 2px solid #dc98bd;
+    border-image-slice: 1;
+}
+.section-title {
+  background: transparent;     /* Pour avoir la div avec la même couleur que le body et stoper la ligne */
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateY(190px) translateX(-50%);
+  transform: translateY(190px) translateX(-50%);
+  display: inline-block;
+  padding: 0 7%;
+  margin: 0;
+  color: white;
+  font-size: 130px;
+}
+
+
+.img_Formation {
+    box-sizing: border-box;
+    max-width: 100%;
+    width: 505px;
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    float: left;
+    z-index: 10;
+}
+
+.ombreSite {
+    max-width: 100%;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    position: absolute;
+    background: #777777;
+    z-index: 2;
+    top: -25px;
+    right: 110px;
+}
+
+.proj_Cercle {
+    box-sizing: border-box;
+    max-width: 100%;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    display: inline-block;
+    overflow: hidden;
+    position: absolute;
+    z-index: 10;
+    right: 50px;
+    transition-property: transform;
+    transition-duration: 3s;
+    transition-timing-function: cubic-bezier(0.0, 0.0, 0.01, 1.0);
+}
+
+
+
+
 
 
 
@@ -398,28 +478,6 @@ header {
   }
 
 
-
-
-
-
-
-.titre_barre {
-    margin: 0 7% 0 7%;
-    height: 140px;
-    border-bottom: 2px solid #dc98bd;
-    border-image-slice: 1;
-}
-.section-title {
-  background: blueviolet;     /* Pour avoir la div avec la même couleur que le body et stoper la ligne */
-  position: relative;
-  left: 50%;
-  -webkit-transform: translateY(-20px) translateX(-50%);
-  transform: translateY(-20px) translateX(-50%);
-  display: inline-block;
-  padding: 0 7%;
-  margin: 0;
-  color: #dc98bd;
-}
 
 
 /***************** RESPONSIVE ******************/

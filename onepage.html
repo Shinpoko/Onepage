@@ -14,9 +14,10 @@
 <link rel="stylesheet" href="style.css">
 
 <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="jquery-ui.min.js"></script>
+<!-- <script type="text/javascript" src="jquery-ui.min.js"></script> -->
 <script type="text/javascript" src="wow.min.js"></script>
 <script type="text/javascript" src="responsiveslides.min.js"></script>
+<script type="text/javascript" src="jquery.parallax-1.1.3.js"></script>
 
 <script>
 	new WOW().init();
@@ -59,7 +60,7 @@
 	<div class="liste">
 		
 	<div id="djill">
-		<div class="wow fadeInUp sites" data-wow-duration="1.5s" data-wow-delay="0.1s" data-wow-offset="70">
+		<div class="wow fadeInUp sites" data-wow-duration="1.5s" >
 			<div class="borderMove" style="float: left; border-color: grey;"></div>
 			<div class="proj_skewG">
 				<div class="project_img">
@@ -72,7 +73,7 @@
 			</div>
 			<div class="projet">
 				<div class="titre_projet">
-					<div class="fleche_ensemble" style="right:26px;">
+					<div class="fleche_ensemble">
 						<div class="fleche3"></div>
 					</div>
 					<div class="back_descr">
@@ -89,7 +90,7 @@
 
 
 	<div id="djeco">
-		<div class="wow fadeInUp sites" data-wow-duration="1.5s" data-wow-delay="0.1s" data-wow-offset="70">
+		<div class="wow fadeInUp sites" data-wow-duration="1.5s" >
 			<div class="borderMove" style="float:right; right: 20px; border-color: #d8f9ef;"></div>
 			<div class="proj_skewG" style="height: 320px; float: right; top: 0; right: 0;">
 				<div class="project_img" style="transform: translateX(-14.714%) translateY(-10%)">
@@ -104,8 +105,8 @@
 					<div class="fleche_ensemble" style="left: 0; right: unset; z-index: 1;">
 						<div class="fleche3"></div>
 					</div>
-					<div class="back_descr" style="left: 0; padding-left: 10; z-index: 10;">
-						<p class="name_proj" style="float: left;">
+					<div class="back_descr" style="left: 0; z-index: 10;">
+						<p class="name_proj">
 							DJECO
 						</p>
 					</div>
@@ -118,7 +119,7 @@
 
 
 	<div id="mille">
-		<div class="wow fadeInUp sites" data-wow-duration="1.5s" data-wow-delay="0.1s" data-wow-offset="70">
+		<div class="wow fadeInUp sites" data-wow-duration="1.5s">
 			<div class="borderMove" style="float: left; border-color: #775a43;"></div>
 			<div class="proj_skewG">
 				<div class="project_img">
@@ -150,14 +151,74 @@
 
 
 
-	<div class="bandeau" style="width: 100%; height: 600px; background: blueviolet;">
+	<div class="bandeau">
 		<div class="title">
-		  <div class="titre_barre">
+<!--		  <div class="titre_barre">
 		  </div>
+-->
 		</div>
 		<div>
-  			<h2 class="section-title">Formation</h2>
+  			<h2 class="section-title">FORMATIONS</h2>
 		</div>
+	</div>
+
+
+	<div class="liste" style="height: 300px;">
+
+		<div id="IIM" style="padding-top: 100px;">
+		<div class="wow fadeInUp sites" data-wow-duration="1.5s" >
+			<div class="img_Formation">
+				<div class="ombreSite">
+				</div>
+				<div class="proj_Cercle">
+					<img src="dh1.png" alt="" style="height: 300px; width: auto;">	
+				</div>
+			</div>
+			
+			<div class="projet">
+				<div class="titre_projet">
+					<div class="fleche_ensemble">
+						<div class="fleche3"></div>
+					</div>
+					<div class="back_descr">
+						<p class="name_proj" style="margin: 0;">
+							BACHELOR
+						</p>
+					</div>
+				</div>
+				<p class="text_proj">Chef de projet Multimedia Web & E-business <br> à l'Institut de l'Internet et du Multimedia </p>
+			</div>
+		</div>
+		</div>
+
+
+		<div id="Licence">
+		<div class="wow fadeInUp sites" data-wow-duration="1.5s" >
+			<div class="img_Formation" style="right: 0;">
+				<div class="ombreSite" style="right: 25px;">
+				</div>
+				<div class="proj_Cercle">
+					<img src="dh1.png" alt="" style="height: 300px; width: auto;">	
+				</div>
+			</div>
+			
+			<div class="projet" style="float: left;">
+				<div class="titre_projet">
+					<div class="fleche_ensemble" style="right: revert; left: 0;">
+						<div class="fleche3"></div>
+					</div>
+					<div class="back_descr" style="right: revert; left: 0;">
+						<p class="name_proj" style="margin: 0;">
+							LICENCE PRO
+						</p>
+					</div>
+				</div>
+				<p class="text_proj" style="text-align: left;">Licence Professionnelle <br> Activités et Techniques de Communication option Services et Technologies de l'Information et de la Communication à l'IUT de Vélizy </p>
+			</div>
+		</div>
+		</div>
+
+
 	</div>
 
 
@@ -165,6 +226,11 @@
 
 
 <script>
+
+$(document).ready(function(){
+	$(".bandeau").parallax("center", 0.4, 0.1, true);
+});
+
 
 $("#header").mouseenter(function(){
 	superG_movement(); //".superG", 0.040
@@ -174,26 +240,61 @@ $("#mille").mouseenter(function(){
 	entreeSouris("#mille", 0.125);
 });
 $("#mille").mouseleave(function(){
-	sortieSouris("#mille", 0.125);
+	sortieSouris("#mille");
 });
 
 $("#djeco").mouseenter(function(){
 	entreeSouris("#djeco", 0.125);
 });
 $("#djeco").mouseleave(function(){
-	sortieSouris("#djeco", 0.125);
+	sortieSouris("#djeco");
 });
 
 $("#djill").mouseenter(function(){
 	entreeSouris("#djill", 0.125);
 });
-
 $("#djill").mouseleave(function(){
-	sortieSouris("#djill", 0.125);
+	sortieSouris("#djill");
+});
+
+$("#IIM").mouseenter(function(){
+	hoverFormation("#IIM", 0.125);
+});
+$("#IIM").mouseleave(function(){
+	sortieSouris("#IIM");
+});
+
+$("#Licence").mouseenter(function(){
+	hoverFormation("#Licence", 0.125);
+});
+$("#Licence").mouseleave(function(){
+	sortieSouris("#Licence");
 });
 
 
+// Mouvement sur le header G
+function superG_movement()
+{
+	var ZContainer = document.querySelector(".superG"),
+		VitesseReduc = 0.040;
 
+	document.body.onmousemove = function(z)
+	{
+		if(document.body.scrollTop < window.innerHeight && ZContainer != null)
+		{
+			var horizScale = -(z.clientX / window.innerWidth - 0.5) * 100 * VitesseReduc;
+			var vertScale = -(z.clientY / window.innerHeight - 0.5) * 100 * VitesseReduc * 2;
+
+			ZContainer.style.opacity = 1;
+			ZContainer.style.animation = "none";
+
+			ZContainer.style.transform = "translateX(" + horizScale + "%) translateY(" + vertScale + "%)";
+		}
+	}
+};
+
+
+// Mouvement sur les projets
 function entreeSouris(les_sites, reduc)
 {
 	var DivMove = document.querySelector(les_sites),
@@ -229,6 +330,36 @@ function entreeSouris(les_sites, reduc)
 };
 
 
+// Mouvement sur les formations
+function hoverFormation(les_sites, reduc)
+{
+	var DivMove = document.querySelector(les_sites),
+	IMGmove = DivMove.querySelector(".proj_Cercle"),
+	FlecheMov = DivMove.querySelector(".fleche3"),
+	NameProject = DivMove.querySelector(".name_proj");
+	reduction = reduc;
+
+	FlecheMov.style.display = "inline-block";
+	FlecheMov.style.animation = "none";
+	FlecheMov.style.transform = "scaleX(1)";
+
+	NameProject.style.color = "white";
+
+	document.body.onmousemove = function(e)
+	{
+		var divHorizScale = -(e.clientX / window.innerWidth - 0.5) * 100 * reduction;
+		var divVertScale = -(e.clientY / window.innerHeight - 0.5) * 100 * reduction * 2;
+		var imgHScale = -divHorizScale;
+		var imgVScale = -divVertScale;
+
+		IMGmove.style.opacity = 1;
+		IMGmove.style.animation = "none";
+		IMGmove.style.transform = "translateX(" + imgHScale + "%) translateY(" + imgVScale + "%)";	
+	}
+};
+
+
+// bandeau noir sur les titres
 function sortieSouris(les_sites) {
 
 	var DivMove = document.querySelector(les_sites),
@@ -242,27 +373,6 @@ function sortieSouris(les_sites) {
 
 };
 
-
-// Little movement on the header G
-function superG_movement()
-{
-	var ZContainer = document.querySelector(".superG"),
-		VitesseReduc = 0.040;
-
-	document.body.onmousemove = function(z)
-	{
-		if(document.body.scrollTop < window.innerHeight && ZContainer != null)
-		{
-			var horizScale = -(z.clientX / window.innerWidth - 0.5) * 100 * VitesseReduc;
-			var vertScale = -(z.clientY / window.innerHeight - 0.5) * 100 * VitesseReduc * 2;
-
-			ZContainer.style.opacity = 1;
-			ZContainer.style.animation = "none";
-
-			ZContainer.style.transform = "translateX(" + horizScale + "%) translateY(" + vertScale + "%)";
-		}
-	}
-}
 
 
 </script>
